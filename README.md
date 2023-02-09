@@ -90,3 +90,22 @@ console.log(sum());//3
 문제는 코드를 작성할 때 예측하지 못한 실행 결과가 노출되는 것 → 🐶발이 힘들어짐.
 이런 예측하지 못하는 상황들을 탈피하기 위해 var를 지양해야한다.
 함수도 호이스팅 되기 떄문에 함수표현식을 사용하는 것이 좋다.
+
+---
+
+## eqeq 줄이기
+
+느슨한 동등자인 == 보다는 엄격한 동등자인 ===를 사용하자. 
+==는 암묵적인 형 변환이 일어나기 때문에 명시적으로 변환해주는 것이 좋다. 
+String(11 + '문자와 결합')
+Number('11')
+parseInt('9.9999', 10)
+
+[https://eslint.org/docs/latest/rules/eqeqeq](https://eslint.org/docs/latest/rules/eqeqeq)
+[https://dorey.github.io/JavaScript-Equality-Table/](https://dorey.github.io/JavaScript-Equality-Table/)
+
+
+## isNaN
+is not a number ->  숫자가 아니다?
+헷갈리는 구문이고 느슨한 검사이기 때문에 엄격하게 사용하자. 
+isNaN(11)보다는 Number.isNaN(11)로 사용합시다!
