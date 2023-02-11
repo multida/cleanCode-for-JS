@@ -109,3 +109,18 @@ parseInt('9.9999', 10)
 is not a number ->  숫자가 아니다?
 헷갈리는 구문이고 느슨한 검사이기 때문에 엄격하게 사용하자. 
 isNaN(11)보다는 Number.isNaN(11)로 사용합시다!
+
+
+## 경계 다루기
+- min / max
+  - 최소값과 최대값을 다룬다.
+  - 최소값과 최대값 포함 여부를 결정해야 한다. ( 이상-초과 / 이하-미만 )
+   - MIN_NUMBER / MAX_NUMBER 는 포함을 하는지 안하는지를 모른다.
+   - MIN_NUMBER_LIMIT = 1; // 미만
+   - MAX_IN_MUNBER = 20 // 이상?
+	
+- begin / end
+  - 체크인/체크아웃 (beginDate / endDate)
+
+- first / last
+  - 포함된 양 끝을 의미한다. ( --- 부터 ~~~ 까지 )
