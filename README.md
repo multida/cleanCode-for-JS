@@ -112,15 +112,38 @@ isNaN(11)보다는 Number.isNaN(11)로 사용합시다!
 
 
 ## 경계 다루기
-- min / max
+### min / max
   - 최소값과 최대값을 다룬다.
   - 최소값과 최대값 포함 여부를 결정해야 한다. ( 이상-초과 / 이하-미만 )
    - MIN_NUMBER / MAX_NUMBER 는 포함을 하는지 안하는지를 모른다.
    - MIN_NUMBER_LIMIT = 1; // 미만
    - MAX_IN_MUNBER = 20 // 이상?
 	
-- begin / end
-  - 체크인/체크아웃 (beginDate / endDate)
+### begin / end
+체크인/체크아웃 (beginDate / endDate)
 
-- first / last
-  - 포함된 양 끝을 의미한다. ( --- 부터 ~~~ 까지 )
+### first / last
+포함된 양 끝을 의미한다. ( --- 부터 ~~~ 까지 )
+  
+### prefix suffix
+- 접두사/접미사의 규칙성을 붙여 보기 쉽게 관리할 수 있다.
+- 코드를 읽는 일관성을 가질 수 있는 좋은 방법이다.
+
+### 매개변수의 순서가 경계다. 
+호출하는 함수의 네이밍과 인자의 순서의 연관성을 고려한다. 
+
+1. 매개변수를 2개가 넘지 않도록 만든다. 
+2. 이름으로 추론할 수 없다면 arguments, rest parameter 사용
+3. 매개변수를 객체에 담아서 넘긴다.
+4. 랩핑하는 함수를 만든다.
+
+```javascript
+getRandomNumber(1, 50)//1부터 50까지의 숫자를 가지고 랜덤하게 뽑나?
+getDates('2023-01-01', '2023-01-31')// 1월 31일까지의 날짜를 얻어오나보다. 
+
+//ES2015+
+function someFunc(someArg1, someArg2, someArg3, someArg4){}
+function getFunc(someArg1, someArg3){
+	someFunc(someArg1, undefined, someArg3); 
+}
+```
