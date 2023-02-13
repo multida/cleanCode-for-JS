@@ -147,3 +147,16 @@ function getFunc(someArg1, someArg3){
 	someFunc(someArg1, undefined, someArg3); 
 }
 ```
+
+---
+## 분기 다루기
+
+### 값식문?
+
+값으로 귀결되는 식
+
+### 삼항연산자
+
+3개의 “피”연산자 
+
+조건 ?  참(식) : 거짓(식)
