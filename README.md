@@ -163,3 +163,31 @@ function getFunc(someArg1, someArg3){
 
 - 값을 만들고 그걸 변수로 담아낼때 사용 
 - 함수가 내뱉는 값이 바로 값을 반환할때 사용한다.
+
+---
+
+## 참 같은 값 (Truthy)
+    if (true)
+    if ({})
+    if ([])
+    if (42)
+    if ("0")
+    if ("false")
+    if (new Date())
+    if (-42)
+    if (12n)
+    if (3.14)
+    if (-3.14)
+    if (Infinity)
+    if (-Infinity)
+    
+## 거짓 같은 값 (Falsy)
+    if (false)
+    if (null)
+    if (undefined)
+    if (0)
+    if (-0)
+    if (0n)
+    if (NaN)
+    if ("")
+
