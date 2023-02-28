@@ -191,3 +191,16 @@ function getFunc(someArg1, someArg3){
     if (NaN)
     if ("")
 
+---
+
+## 배열인지 아닌지 (Array.isArray())
+js는 배열을 객채의 한 종류라고 생각한다. 
+console에서 typeof 연산자를 통해 배열과 객체의 타입을 확인해보면 .. 둘다 object를 반환하는 걸 볼 수 있다. 
+
+<img width="127" alt="image" src="https://user-images.githubusercontent.com/39932346/221860741-d7eb859e-c382-48db-a5fd-8b1395a2c14a.png">
+
+
+따라서, typeof만으로는 객체가 배열인지 확인할 수 없다. 그렇기에 배열과 객체를 명확하게 구분하여야 하는데, 그때 배열을 확인하기 위해서 `isArray()`를 사용한다.
+
+<img width="146" alt="image" src="https://user-images.githubusercontent.com/39932346/221860388-9fb19bed-67dc-4a16-b87a-06ba131b6ad8.png">
+
