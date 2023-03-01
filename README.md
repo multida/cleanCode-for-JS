@@ -204,3 +204,14 @@ console에서 typeof 연산자를 통해 배열과 객체의 타입을 확인해
 
 <img width="146" alt="image" src="https://user-images.githubusercontent.com/39932346/221860388-9fb19bed-67dc-4a16-b87a-06ba131b6ad8.png">
 
+---
+
+### forEach 반복문은 continue나 break 구문을 사용할 수 없다.
+예외를 던지지 않고서는 forEach()는 중간에 멈출 수 없다고 한다. 중간에 멈춰야 한다면 forEach()가 적절한 방법이 아닐지도 모르지만 굳이 사용하고자 한다면 방법은 있다!(공식 문서 참고)
+```
+for...of, for...in 반복문
+Array.prototype.every()
+Array.prototype.some()
+Array.prototype.find()
+Array.prototype.findIndex() 다른 배열 메서드 every(), some(), find(), findIndex()는 배열 요소를 판별 함수에 전달하고, 그 결과의 참/거짓 여부에 따라 반복의 종료 여부를 결정합니다.
+```
